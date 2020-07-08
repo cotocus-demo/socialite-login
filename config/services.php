@@ -33,9 +33,10 @@ return [
     'sparkpost' => [
         'secret' => env('SPARKPOST_SECRET'),
     ],
+
     'facebook' => [
-    'client_id' => env('320947098906857'),
-    'client_secret' => env('0f1a689e3f6710cdbce55dea5ee50e30'),
+    'client_id' => ('2637146519839712'),
+    'client_secret' => ('219140b9ed87b8b530dfafd37c9183ee'),
     'redirect' => 'http://localhost/multilogin/public/auth/facebook/callback',
 ],
 

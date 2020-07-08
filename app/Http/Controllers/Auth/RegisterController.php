@@ -31,12 +31,7 @@ class RegisterController extends Controller
      * @var string
      */
     protected $redirectTo = '/home';
-
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
+   
     public function __construct()
     {
         $this->middleware('guest');
@@ -71,17 +66,12 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password']),
         ]);
     }
-    public function redirectToProvider()
-    {
-        return Socialite::driver('facebook')->redirect();
-    }
 
-    /**
-     * Obtain the user information from GitHub.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function handleProviderCallback()
+     public function redirectToProvider($provider)
+    {
+        return Socialite::driver($provider)->redirect();
+    }
+    public function handleProviderCallback($provider)
     {
         try
         {
@@ -108,6 +98,7 @@ class RegisterController extends Controller
             $user = $socialProvider->user;
          
         auth()->login($user);
-        return redirect('/home');
+        return redirect()->to('/home');
     }
+   
 }
