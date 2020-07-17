@@ -40,4 +40,9 @@ return [
     'redirect' => 'http://localhost/multilogin/public/auth/facebook/callback',
 ],
 
+    'google' => [
+    'client_id' => ('19790244125-vimucbmbe9mkfcev28a5qokppu0vnrrj.apps.googleusercontent.com'),
+    'client_secret' => ('x0rx47KljeL3bSqY7XPCx_sI'),
+    'redirect' => 'http://localhost/multilogin/public/auth/google/callback',
+],
 ];

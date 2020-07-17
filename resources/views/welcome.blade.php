@@ -71,8 +71,8 @@
                         <a href="{{ url('/home') }}">Home</a>
                     @else
                         <a href="{{ route('login') }}">Login</a>
-                        <a href="{{url('/auth/facebook')}}" class="btn btn-primary"> Facebook </a>
-
+                        <a href="{{url('/auth/facebook')}}"> Facebook </a>
+                        <a href="{{url('/auth/google')}}" > Google </a>
                         @if (Route::has('register'))
                             <a href="{{ route('register') }}">Register</a>
                         @endif
